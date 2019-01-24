@@ -1,0 +1,27 @@
+<template id="t">
+    <button>Hide</button>
+</template>
+
+<script>
+    (function() {
+        var ctx = new Context();
+
+        newElement('toggle-next', {
+            createdCallback: function() {
+                this.appendChild(ctx.import('t'));
+                this.button = this.querySelector('button');
+                this.button.addEventListener('click', this._buttonClick.bind(this));
+            },
+            _buttonClick: function() {
+                var current = this.nextElementSibling.style.visibility;
+                if (current === 'collapse') {
+                    this.nextElementSibling.style.visibility = 'visible';
+                    this.button.innerText = 'Hide';
+                } else {
+                    this.nextElementSibling.style.visibility = 'collapse';
+                    this.button.innerText = 'Show';
+                }
+            }
+        });
+    })();
+</script>

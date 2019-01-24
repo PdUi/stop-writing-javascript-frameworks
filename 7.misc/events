@@ -1,0 +1,4 @@
+ele.addEventListener('some-event', function(e) {/**/});
+
+var e = new CustomEvent('some-event', { details: details});
+this.dispatchEvent(e);

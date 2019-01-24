@@ -1,0 +1,1 @@
+Notes taken from talk: https://www.youtube.com/watch?v=GMWAHzXQnNM

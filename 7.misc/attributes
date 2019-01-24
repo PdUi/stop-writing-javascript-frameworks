@@ -1,0 +1,5 @@
+<button id="submit">Submit</button>
+
+document.querySelector('#submit').id;
+
+document.querySelector('#submit').click();
